@@ -7,7 +7,7 @@ import packageJson from "./package.json";
 
 export default [
     {
-      input: 'src/components/index.ts',
+      input: 'src/index.ts',
       output: [
         {
           format: 'esm',
