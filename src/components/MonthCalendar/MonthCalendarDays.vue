@@ -1,12 +1,10 @@
 <template>
-<div>
     <slot name="fill-days-before" :days="(preDays as Array<DayCalendar>)">
     </slot>
     <slot name="current-days" :days="(calendar.days() as Array<DayCalendar>)">
     </slot>
     <slot name="fill-days-after" :days="(afterDays as Array<DayCalendar>)">
     </slot>
-</div>
 </template>
 
 <script lang="ts" setup>
