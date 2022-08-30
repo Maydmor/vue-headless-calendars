@@ -1,6 +1,8 @@
-import typescript from '@rollup/plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
 import vue from 'rollup-plugin-vue'
-import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 import packageJson from "./package.json";
 
 export default [
@@ -18,13 +20,13 @@ export default [
           sourcemap: true
         }
       ],
-      external: ['vue'],
+      // external: ['vue'],
       plugins: [
-        typescript({
-            tsconfig: './tsconfig.json',
-            experimentalDecorators: true,
-            module: 'es2022'
-        }), vue(), peerDepsExternal()
+        peerDepsExternal(),
+        resolve(),
+        typescript(), 
+        vue(),
+        commonjs()
       ]
     }
   ]

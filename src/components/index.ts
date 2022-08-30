@@ -1,14 +1,11 @@
-import components from'./components'
+import {DayCalendar, MonthCalendar, MonthCalendarDays, YearCalendar} from'./components'
 
 const plugin = {
-  install (Vue) {
-    for (const prop in components) {
-      if (components.hasOwnProperty(prop)) {
-        //@ts-ignore
-        const component = components[prop]
-        Vue.component(component.name, component)
-      }
-    }
+  install (Vue: {component: (name: string, component: any)=>void}) {
+    Vue.component('DayCalendar', DayCalendar);
+    Vue.component('MonthCalendar', MonthCalendar);
+    Vue.component('MonthCalendarDays', MonthCalendarDays);
+    Vue.component('YearCalendar', YearCalendar);
   }
 }
 
