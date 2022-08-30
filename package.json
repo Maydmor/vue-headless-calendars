@@ -1,6 +1,6 @@
 {
   "name": "vue-headless-calendars",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "lib/index.js",
   "module": "lib/library.esm.mjs",
   "types": "lib/index.d.ts",
