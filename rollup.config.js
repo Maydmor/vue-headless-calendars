@@ -1,6 +1,7 @@
 import typescript from '@rollup/plugin-typescript';
 import vue from 'rollup-plugin-vue'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import packageJson from "./package.json";
 
 export default [
     {
@@ -8,11 +9,13 @@ export default [
       output: [
         {
           format: 'esm',
-          dir: 'dist/library.esm.js'
+          file: packageJson.module,
+          sourcemap: true
         },
         {
           format: 'cjs',
-          dir: 'dist/library.ssr.js'
+          file: packageJson.main,
+          sourcemap: true
         }
       ],
       external: ['vue'],

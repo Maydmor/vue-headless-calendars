@@ -1,10 +1,10 @@
 {
   "name": "vue-headless-calendars",
   "version": "0.0.1",
-  "main": "dist/library.js",
-  "module": "dist/library.mjs",
+  "main": "lib/index.js",
+  "module": "lib/library.esm.mjs",
   "files": [
-    "dist/*"
+    "lib"
   ],
   "scripts": {
     "dev": "vite",
